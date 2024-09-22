@@ -1,0 +1,1 @@
+This issue is initialze the blog.
