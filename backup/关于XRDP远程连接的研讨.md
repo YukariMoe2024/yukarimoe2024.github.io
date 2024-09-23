@@ -1,0 +1,4 @@
+1.KDE Plasma桌面环境对XRDP有优化,且资源占用可以比Xfce还低了（此文章发布时Xfce最新版本是4.18,有严重的内存泄露）
+2.xrdp.ini中tcp_send_buffer_bytes和tcp_recv_buffer_bytes值不宜太高也不宜太低
+3.RDP客户端版本也一定要合适,不然怎么配置都会很卡
+4.服务器带宽一定要很好
