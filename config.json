@@ -4,6 +4,6 @@
     "avatarUrl":"https://q1.qlogo.cn/g?b=qq&nk=891947229&s=640",
     "displayTitle": "Yukari's Blog",
     "email": "yukati2024@outlook.com",
-    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>",
+    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/articletoc.js'></script>",
     "GMEEK_VERSION":"last"
 }
