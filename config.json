@@ -2,8 +2,10 @@
     "title":"Yukari's Blog",
     "subTitle":"Just leave me drifting alone in the endless darkness..",
     "avatarUrl":"https://q1.qlogo.cn/g?b=qq&nk=891947229&s=640",
-    "displayTitle": "Yukari's Blog",
     "email": "yukati2024@outlook.com",
-    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/articletoc.js'></script>",
+    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/articletoc.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
+    "startSite":"07/01/2024",
+    "bottomText":"转载请注明出处",
+    "onePageListNum":15,
     "GMEEK_VERSION":"last"
 }
