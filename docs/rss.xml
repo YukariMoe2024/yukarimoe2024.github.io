@@ -1,5 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Yukari's Blog</title><link>https://yukarimoe2024.github.io</link><description>Just leave me drifting alone in the endless darkness..</description><copyright>Yukari's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://q1.qlogo.cn/g?b=qq&amp;nk=891947229&amp;s=640</url><title>avatar</title><link>https://yukarimoe2024.github.io</link></image><lastBuildDate>Mon, 23 Sep 2024 13:06:05 +0000</lastBuildDate><managingEditor>Yukari's Blog</managingEditor><ttl>60</ttl><webMaster>Yukari's Blog</webMaster><item><title>如何在Rocky Linux 8上设置XRDP</title><link>https://yukarimoe2024.github.io/post/ru-he-zai-Rocky%20Linux%208-shang-she-zhi-XRDP.html</link><description>## 软件包预备  &#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Yukari's Blog</title><link>https://yukarimoe2024.github.io</link><description>Just leave me drifting alone in the endless darkness..</description><copyright>Yukari's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://q1.qlogo.cn/g?b=qq&amp;nk=891947229&amp;s=640</url><title>avatar</title><link>https://yukarimoe2024.github.io</link></image><lastBuildDate>Wed, 25 Sep 2024 15:02:24 +0000</lastBuildDate><managingEditor>Yukari's Blog</managingEditor><ttl>60</ttl><webMaster>Yukari's Blog</webMaster><item><title>systemD 创建服务</title><link>https://yukarimoe2024.github.io/post/systemD%20-chuang-jian-fu-wu.html</link><description>对照以下填写即可  &#13;
+```systemD Service&#13;
+[Unit]&#13;
+Description=Service Name&#13;
+After=network.target&#13;
+&#13;
+[Service]&#13;
+User=User Name&#13;
+WorkingDirectory=/dir&#13;
+ExecStart=/usr/bin/chromium&#13;
+Restart=always&#13;
+&#13;
+[Install]&#13;
+WantedBy=multi-user.target&#13;
+```。</description><guid isPermaLink="true">https://yukarimoe2024.github.io/post/systemD%20-chuang-jian-fu-wu.html</guid><pubDate>Wed, 25 Sep 2024 15:01:57 +0000</pubDate></item><item><title>如何在Rocky Linux 8上设置XRDP</title><link>https://yukarimoe2024.github.io/post/ru-he-zai-Rocky%20Linux%208-shang-she-zhi-XRDP.html</link><description>## 软件包预备  &#13;
 以下将以Xorg XRDP为例  &#13;
 &gt; [!TIP]  &#13;
 &gt; 你将需要安装以下软件包：xorgxrdp xrdp,以及一个可以正常工作的桌面环境。</description><guid isPermaLink="true">https://yukarimoe2024.github.io/post/ru-he-zai-Rocky%20Linux%208-shang-she-zhi-XRDP.html</guid><pubDate>Mon, 23 Sep 2024 13:03:23 +0000</pubDate></item><item><title>关于XRDP远程连接的研讨</title><link>https://yukarimoe2024.github.io/post/guan-yu-XRDP-yuan-cheng-lian-jie-de-yan-tao.html</link><description>1.KDE Plasma桌面环境对XRDP有优化,且资源占用可以比Xfce还低了（此文章发布时Xfce最新版本是4.18,有严重的内存泄露）&#13;
