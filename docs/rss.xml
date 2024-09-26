@@ -1,5 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>MinimalMio's Blog</title><link>https://yukarimoe2024.github.io</link><description>Just leave me drifting alone in the endless darkness..</description><copyright>MinimalMio's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://q1.qlogo.cn/g?b=qq&amp;nk=891947229&amp;s=640</url><title>avatar</title><link>https://yukarimoe2024.github.io</link></image><lastBuildDate>Wed, 25 Sep 2024 15:57:32 +0000</lastBuildDate><managingEditor>MinimalMio's Blog</managingEditor><ttl>60</ttl><webMaster>MinimalMio's Blog</webMaster><item><title>systemD 创建服务</title><link>https://yukarimoe2024.github.io/post/systemD%20-chuang-jian-fu-wu.html</link><description>对照以下填写即可  &#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>MinimalMio's Blog</title><link>https://yukarimoe2024.github.io</link><description>Just leave me drifting alone in the endless darkness..</description><copyright>MinimalMio's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://q1.qlogo.cn/g?b=qq&amp;nk=891947229&amp;s=640</url><title>avatar</title><link>https://yukarimoe2024.github.io</link></image><lastBuildDate>Thu, 26 Sep 2024 11:21:35 +0000</lastBuildDate><managingEditor>MinimalMio's Blog</managingEditor><ttl>60</ttl><webMaster>MinimalMio's Blog</webMaster><item><title>code-server 快速部署留档</title><link>https://yukarimoe2024.github.io/post/code-server%20-kuai-su-bu-shu-liu-dang.html</link><description>```Dockerfile&#13;
+FROM debian:12&#13;
+&#13;
+# 在这里填写密码，将同时作用于sudo密码和code-server&#13;
+ENV PASSWORD=example&#13;
+&#13;
+RUN apt-get update &amp;&amp; \&#13;
+    apt-get install -y sudo wget build-essential git &amp;&amp; \&#13;
+    useradd -m dev -s /bin/bash &amp;&amp; \&#13;
+    echo 'dev:$PASSWORD' | chpasswd &amp;&amp; \&#13;
+    usermod -aG sudo dev &amp;&amp; \&#13;
+    wget https://github.com/coder/code-server/releases/download/v4.93.1/code-server_4.93.1_amd64.deb &amp;&amp; \&#13;
+    apt-get install -y ./code-server_4.93.1_amd64.deb &amp;&amp; \&#13;
+    rm code-server_4.93.1_amd64.deb&#13;
+&#13;
+EXPOSE 8080&#13;
+&#13;
+USER dev&#13;
+CMD ['code-server', '--bind-addr', '0.0.0.0:8080']&#13;
+```&#13;
+使用命令`podman build -t codeserver:latest .`构建映像（个人更喜欢Podman）  &#13;
+需要映射容器内端口 8080 为服务器的 任意端口（记得开防火墙  。</description><guid isPermaLink="true">https://yukarimoe2024.github.io/post/code-server%20-kuai-su-bu-shu-liu-dang.html</guid><pubDate>Thu, 26 Sep 2024 11:21:00 +0000</pubDate></item><item><title>systemD 创建服务</title><link>https://yukarimoe2024.github.io/post/systemD%20-chuang-jian-fu-wu.html</link><description>对照以下填写即可  &#13;
 ```systemD Service&#13;
 [Unit]&#13;
 Description=Service Name&#13;
