@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>MinimalMio's Blog</title><link>https://yukarimoe2024.github.io</link><description>Just leave me drifting alone in the endless darkness..</description><copyright>MinimalMio's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://q1.qlogo.cn/g?b=qq&amp;nk=891947229&amp;s=640</url><title>avatar</title><link>https://yukarimoe2024.github.io</link></image><lastBuildDate>Thu, 26 Sep 2024 16:56:16 +0000</lastBuildDate><managingEditor>MinimalMio's Blog</managingEditor><ttl>60</ttl><webMaster>MinimalMio's Blog</webMaster><item><title>备忘：Linux 中 Swap 交换分区设置教程，以及 Swap 大小与内存的关系</title><link>https://yukarimoe2024.github.io/post/bei-wang-%EF%BC%9ALinux%20-zhong-%20Swap%20-jiao-huan-fen-qu-she-zhi-jiao-cheng-%EF%BC%8C-yi-ji-%20Swap%20-da-xiao-yu-nei-cun-de-guan-xi.html</link><description># 备忘：Linux 中 Swap 交换分区设置教程，以及 Swap 大小与内存的关系  &#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>MinimalMio's Blog</title><link>https://yukarimoe2024.github.io</link><description>Just leave me drifting alone in the endless darkness..</description><copyright>MinimalMio's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://q1.qlogo.cn/g?b=qq&amp;nk=891947229&amp;s=640</url><title>avatar</title><link>https://yukarimoe2024.github.io</link></image><lastBuildDate>Sat, 12 Oct 2024 15:27:50 +0000</lastBuildDate><managingEditor>MinimalMio's Blog</managingEditor><ttl>60</ttl><webMaster>MinimalMio's Blog</webMaster><item><title>C++代码片段：隐藏终端回显</title><link>https://yukarimoe2024.github.io/post/C%2B%2B-dai-ma-pian-duan-%EF%BC%9A-yin-cang-zhong-duan-hui-xian.html</link><description>&gt; [!NOTE]  &#13;
+&gt; 以下代码片段只适用于Unix/Linux  &#13;
+```C++&#13;
+#include&lt;termios.h&gt;&#13;
+#include&lt;unistd.h&gt;&#13;
+&#13;
+void hideInput(bool hide) {&#13;
+    struct termios tty;&#13;
+    tcgetattr(STDIN_FILENO, &amp;tty);&#13;
+    if (hide) {&#13;
+        tty.c_lflag &amp;= ~ECHO;&#13;
+    } else {&#13;
+        tty.c_lflag |= ECHO;&#13;
+    }&#13;
+    tcsetattr(STDIN_FILENO, TCSANOW, &amp;tty);&#13;
+}&#13;
+```。</description><guid isPermaLink="true">https://yukarimoe2024.github.io/post/C%2B%2B-dai-ma-pian-duan-%EF%BC%9A-yin-cang-zhong-duan-hui-xian.html</guid><pubDate>Sat, 12 Oct 2024 15:27:25 +0000</pubDate></item><item><title>备忘：Linux 中 Swap 交换分区设置教程，以及 Swap 大小与内存的关系</title><link>https://yukarimoe2024.github.io/post/bei-wang-%EF%BC%9ALinux%20-zhong-%20Swap%20-jiao-huan-fen-qu-she-zhi-jiao-cheng-%EF%BC%8C-yi-ji-%20Swap%20-da-xiao-yu-nei-cun-de-guan-xi.html</link><description># 备忘：Linux 中 Swap 交换分区设置教程，以及 Swap 大小与内存的关系  &#13;
 &#13;
 ## Swap 分区是什么&#13;
 &#13;
