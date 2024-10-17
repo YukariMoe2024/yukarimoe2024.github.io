@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>MinimalMio's Blog</title><link>https://yukarimoe2024.github.io</link><description>Just leave me drifting alone in the endless darkness..</description><copyright>MinimalMio's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://q1.qlogo.cn/g?b=qq&amp;nk=891947229&amp;s=640</url><title>avatar</title><link>https://yukarimoe2024.github.io</link></image><lastBuildDate>Sat, 12 Oct 2024 15:27:50 +0000</lastBuildDate><managingEditor>MinimalMio's Blog</managingEditor><ttl>60</ttl><webMaster>MinimalMio's Blog</webMaster><item><title>C++代码片段：隐藏终端回显</title><link>https://yukarimoe2024.github.io/post/C%2B%2B-dai-ma-pian-duan-%EF%BC%9A-yin-cang-zhong-duan-hui-xian.html</link><description>&gt; [!NOTE]  &#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>MinimalMio's Blog</title><link>https://yukarimoe2024.github.io</link><description>Just leave me drifting alone in the endless darkness..</description><copyright>MinimalMio's Blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://q1.qlogo.cn/g?b=qq&amp;nk=891947229&amp;s=640</url><title>avatar</title><link>https://yukarimoe2024.github.io</link></image><lastBuildDate>Thu, 17 Oct 2024 12:41:26 +0000</lastBuildDate><managingEditor>MinimalMio's Blog</managingEditor><ttl>60</ttl><webMaster>MinimalMio's Blog</webMaster><item><title>在 Ubuntu 20.04 上编译安装 XRDP 全过程记录</title><link>https://yukarimoe2024.github.io/post/zai-%20Ubuntu%2020.04%20-shang-bian-yi-an-zhuang-%20XRDP%20-quan-guo-cheng-ji-lu.html</link><description># 环境准备  &#13;
+&#13;
+安装软件包`build-essential libx11-dev libpam-dev libxrandr-dev libxfixes-dev autoconf automake libtool-bin pkg-config libfreetype2-dev libimlib2-dev `,以上是 XRDP 的编译安装依赖  &#13;
+我们还需要以下软件包来编译安装 XorgXRDP：`xserver-xorg-dev`  &#13;
+&#13;
+# 编译安装 XRDP&#13;
+&#13;
+以下命令在当时环境中全部在 root 用户下运行。</description><guid isPermaLink="true">https://yukarimoe2024.github.io/post/zai-%20Ubuntu%2020.04%20-shang-bian-yi-an-zhuang-%20XRDP%20-quan-guo-cheng-ji-lu.html</guid><pubDate>Thu, 17 Oct 2024 12:40:58 +0000</pubDate></item><item><title>C++代码片段：隐藏终端回显</title><link>https://yukarimoe2024.github.io/post/C%2B%2B-dai-ma-pian-duan-%EF%BC%9A-yin-cang-zhong-duan-hui-xian.html</link><description>&gt; [!NOTE]  &#13;
 &gt; 以下代码片段只适用于Unix/Linux  &#13;
 ```C++&#13;
 #include&lt;termios.h&gt;&#13;
